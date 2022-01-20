@@ -13,6 +13,12 @@ type TestCase struct {
 	actual   bool
 }
 
+
+// a few helpful commands :
+// go test --cover
+// go test -coverprofile=coverage.out
+// go tool cover -html=coverage.out
+
 func TestCalculateIsArmstrong(t *testing.T) {
 
 	t.Run("test for all 3 digit armstrog numbers", func(t *testing.T) {
