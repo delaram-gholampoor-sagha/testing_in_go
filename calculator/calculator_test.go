@@ -1,4 +1,8 @@
+// +build unit
+
 package calculator_test
+
+//go test --tags=unit -v
 
 import (
 	"testing"

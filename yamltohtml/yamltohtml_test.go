@@ -1,3 +1,7 @@
+// +build unit
+
+//go test --tags=unit -v
+
 package yamltohtmlgo_test
 
 import (

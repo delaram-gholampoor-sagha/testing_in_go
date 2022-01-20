@@ -1,3 +1,7 @@
+// +build integration
+
+//go test --tags=integration -v
+
 package service_test
 
 import (
