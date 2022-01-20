@@ -13,7 +13,6 @@ type TestCase struct {
 	actual   bool
 }
 
-
 // a few helpful commands :
 // go test --cover
 // go test -coverprofile=coverage.out
@@ -69,4 +68,23 @@ func TestNegativeCalculateIsArmstrong(t *testing.T) {
 
 	})
 
+}
+
+func benchmarkCalculateIsArmstring(input int , b *testing.B) {
+	for i := 0; i < b.N; i++ {
+           calculator.CalculateIsArmstrong(input)
+	}
+}
+
+
+// go test -run=Benchmark -bench=.
+
+func BenchmarkCalculateIsArmstring370(b *testing.B) {
+	 benchmarkCalculateIsArmstring(370 , b)
+}
+func BenchmarkCalculateIsArmstring371(b *testing.B) {
+	 benchmarkCalculateIsArmstring(371 , b)
+}
+func BenchmarkCalculateIsArmstring0(b *testing.B) {
+	benchmarkCalculateIsArmstring(0 , b)
 }
